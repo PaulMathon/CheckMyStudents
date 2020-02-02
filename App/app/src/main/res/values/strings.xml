@@ -1,0 +1,65 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string name="app_name">CheckMyStudents</string>
+    <!-- Strings related to login -->
+    <string name="prompt_login">Login</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">You did not enterred any password</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_list_of_courses">Liste des cours</string>
+    <string name="title_activity_student_list">Etudiants</string>
+    <string name="title_activity_resume">Feuille de présence</string>
+    <string name="subtitle_resume">Résumé</string>
+    <string name="signature_button">Signer pour confirmer</string>
+    <string name="signup_button_text"><u>Créer un compte</u></string>
+    <string name="signin_button_text">Connexion</string>
+    <string name="signup_button_submit_text">Créer le compte</string>
+
+    <!-- Signature Layout -->
+    <string name="hint_sign">Get Signature</string>
+    <string name="sign_here_title">Sign Here</string>
+    <string name="hint_cancel">Retour</string>
+    <string name="hint_clear">Effacer</string>
+    <string name="hint_save">Save</string>
+    <string name="bill_details_title">Bill Details</string>
+    <string name="date">Date</string>
+    <string name="date_data">16 Mar 2017</string>
+    <string name="order_no">Order Number</string>
+    <string name="order_no_data">10798565</string>
+    <string name="contact_no">Contact Number</string>
+    <string name="contact_no_data">0000000000</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="total_amount_data">Rs 1500</string>
+    <string name="checkbox_text">I have Successfully Received the product</string>
+    <string name="get_signature_text">Get Signature</string>
+    <string name="email_button">Envoyer la fiche d\'appel</string>
+
+    <string name="signUp_title">Inscription</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close  Navigation Drawer</string>
+
+    <string name="profile_title">Mes informations</string>
+
+    <string name="settings_title">Réglages</string>
+
+    <string name="title_login"><b>Login : </b></string>
+    <string name="title_email"><b>Email : </b></string>
+    <string name="title_password"><b>Mot de passe : </b></string>
+
+    <string name="in_development_process">Oups ! Cette page n\'est pas encore disponible...</string>
+
+    <string name="help_title"><b>Bienvenue !</b></string>
+    <string name="help_text">Si vous en avez assez de perdre du temps à faire l\'appel pendant vos cours,
+        cette application est faite pour vous. Son fonctionnement est très simple, choisissez votre cours,
+        puis sélectionnez les élèves absents, ajoutez votre signature et le tour est joué!
+        La liste en automatiquement envoyée par mail à l\'admistration.</string>
+
+</resources>

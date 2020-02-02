@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:text="@string/subtitle_resume"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre d'absents : "
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/presence_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personnes absentes"
+            android:layout_gravity="center_horizontal"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/absence_list_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:textSize="25dp"
+                android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/signature_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signature_button"
+            android:background="@drawable/button_shape"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/white"/>
+
+        <FrameLayout
+            android:id="@+id/signature_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+
+    </LinearLayout>
+
+</ScrollView>

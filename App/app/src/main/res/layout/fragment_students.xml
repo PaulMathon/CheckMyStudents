@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.StudentList.StudentListActivity"
+    tools:showIn="@layout/activity_student_list">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightGrey">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:id="@+id/student_RecyclerView">
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_marginBottom="20dp"
+            android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_shape"
+            android:text="Envoyer"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"></Button>
+    </LinearLayout>
+</ScrollView>

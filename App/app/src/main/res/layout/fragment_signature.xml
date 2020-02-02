@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:background="@android:color/white"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="@dimen/weight_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:text="@string/hint_cancel"
+            tools:ignore="ButtonStyle"
+            android:textColor="@android:color/white"
+            android:background="@color/DarkGrey" />
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="@dimen/weight_width"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:text="@string/hint_clear"
+            tools:ignore="ButtonStyle"
+            android:textColor="@android:color/white"
+            android:background="@color/DarkGrey" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/canvasLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/white"
+        android:orientation="vertical" />
+    <Button
+        android:id="@+id/send_email_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_shape"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/email_button"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
+
