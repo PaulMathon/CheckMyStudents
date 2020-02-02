@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+  <link rel="stylesheet" type="text/css" href="/css/styleAdmin.css">
+  <title>Accueil Administrateur</title>
+  <script src="../../../js/Administrator/HomeAdmin.js" type="application/javascript"></script>
+</head>
+<body>
+<header th:replace="~{fragmentAdmin::header}"></header>
+<nav th:replace="~{fragmentAdmin::menu(accueil)}"></nav>
+<main id="acceuil">
+  <article>
+    <h2>Bienvenue dans l'espace Administrateur de PRONOMASTER ! </h2>
+    <p>De nombreuses fonctionnalit&#233;s sont ici disponnibles afin d'assurer au mieux le bon d&#233;roulement des parties des joueurs. Parmi lesquelles nous retrouvons...</p>
+    <h3>Ajouter des matchs</h3>
+    <p>Rendez-vous sur l'onglet "Ajouter un match" pour compl&#233;ter la liste des matchs sur lesquelles les joueurs pourront imm&#233;diatement parier</p>
+    <h3>Inscrire les r&#233;sultats</h3>
+    <p>Une fois un match termin&#233;, il vous sera possible de renseigner son r&#233;sultat en vous rendant dans l'onglet "Entrer des scores". Une fois le score inscrit, les joueurs verront automatiquement leur score &#233;voluer (ou non) en cons&#233;quence.</p>
+    <div id="membersDesc">
+      <h3>G&#233;rer les membres</h3>
+      <p>L'onglet "Membres" vous permettra d'effectuer diff&#233;rentes op&#233;rations sur les membres de Pronomaster :</p>
+      <ul>
+        <li>Visualiser l'ensemble des membres, aussi bien administrateur que joueurs, avec un code couleur vous permettant de les diff&#233;rencier</li>
+        <li>Si par exemple un membre &#224; un comportement ind&#233;sirable, ou si il est innactif pendant trop longtemps, il vous sera possible de le banir en cliquant sur "bannir"</li>
+        <li>Si vous d&#233;sirez changer le statut d'un utilisateur, nommer quelqu'un administrateur ou inversement, la fonctionnalit&#233; est &#233;galement disponnible</li>
+      </ul>
+    </div>
+  </article>
+
+</main>
+
+</body>
+</html>

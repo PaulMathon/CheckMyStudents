@@ -1,0 +1,489 @@
+@font-face {
+    font-family:'PhosphateInline';
+    src:url('/fonts/PhosphateInline.ttf')format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+body{
+    font-family:'Arial','Helvetica',sans-serif;
+    background-color: #F5F5F5;
+    padding:0;
+    margin:0;
+}
+
+/*BARRE DE TITRE*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image:url("/images/backgroundHeader.png");
+    position: -webkit-sticky; /* Safari*/
+    position: sticky;
+    top:0;
+}
+
+header h1{
+    font-family:'PhosphateInline','Arial';
+    font-size: 2em;
+    color:white;
+    margin-left: 1em;
+    margin-top:1.3em;
+}
+
+header a{
+    background-color: rgb(70,140,36);
+    color:white;
+    font-size: 0.7em;
+    padding:0.5em;
+    padding-left:1em;
+    padding-right:1em;
+    text-decoration:none;
+    margin-right: 2em;
+    border-radius:2px;
+    transition:0.5s;
+    border-style: solid;
+    border-width: 1px;
+    border-color:rgb(12,111,10);
+}
+
+header a:hover{
+    background-color: rgb(12,111,10);
+    transition:0.5s;
+}
+
+/*BARRE DE MENU*/
+
+nav{
+    display:flex;
+    background-color: rgb(70,140,36);
+    padding-left:1em;
+    position: -webkit-sticky; /* Safari*/
+    position:sticky;
+    top:3.9em;
+    width: inherit;
+}
+
+nav p{
+    margin-top:0;
+    margin-bottom: 0;
+    padding-top:0.5em;
+    padding-bottom: 0.5em;
+}
+
+nav p a{
+    color:white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin-top:0;
+    transition:0.5s;
+}
+
+nav p a:hover{
+    background-color:rgb(12,111,10);
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px;
+    transition: 1s;
+}
+
+.active{
+    background-color:rgb(12,111,10);
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px;
+}
+
+#userName{
+    margin-left : 29%;
+    color:white;
+}
+
+@media only screen and (max-width: 750px) {
+    /*image avec titre + déconnection*/
+
+    header{
+        flex-direction:column;
+        justify-content: center;
+        background: rgb(70, 140, 36) none;
+    }
+
+    header h1{
+        font-size: 2em;
+        margin-left:0;
+        margin-top:1.3em;
+    }
+
+    header a{
+        background-color: rgb(70,140,36);
+        color:white;
+        font-weight:bold;
+        margin-right: 0;
+        border-color:rgb(12,111,10);
+    }
+
+    /*Menu de navigation*/
+
+    nav{
+        display:flex;
+        background-color: rgb(70,140,36);
+        padding-left:1em;
+        justify-content: center;
+    }
+}
+/*ACCUEIL*/
+
+#acceuil article{
+    display:flex;
+    flex-direction: column;
+    width:80%;
+    margin-left:10%;
+    margin-bottom:3em;
+}
+
+#acceuil h2{
+    color:rgb(70,140,36);
+    font-size: 2em;
+    margin-top:1.5em;
+}
+
+#acceuil h3{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#acceuil #membersDesc{
+    display:flex;
+    flex-direction: column;
+}
+
+/*AJOUT MATCHS */
+
+.ajoutMatch{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ajoutMatch h2{
+    margin-top:1.5em;
+    margin-bottom:0.5em;
+    margin-right: 3.5em;
+    color:rgb(70,140,36);
+}
+
+.ajoutMatch form{
+    width:70%;
+}
+
+.ajoutMatch .remplir{
+    width:100%;
+
+}
+
+.ajoutMatch .rempli{
+    width:70%;
+    margin-bottom:3em;
+}
+
+.ajoutMatch td{
+    border-top: 1px solid gray;
+}
+
+.ajoutMatch .remplir td{
+    padding-top:0.4em;
+}
+
+.ajoutMatch .rempli td{
+    padding-top:0.8em;
+    padding-bottom:0.8em;
+}
+
+.ajoutMatch button{
+    border:none;
+    background-color:rgb(70,140,36);
+    color:white;
+    border-radius:0.2em;
+    transition:0.2s;
+    width:50%;
+    margin-left:25%;
+    margin-top:1.5em;
+    padding-top:0.4em;
+    padding-bottom:0.4em;
+}
+
+.ajoutMatch button:hover{
+    font-weight: bold;
+    background-color: rgb(12,111,10);
+    transition:0.2s;
+}
+
+
+/*ENTRER SCORE*/
+
+.entrerScore{
+    background-color: #F5F5F5;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.entrerScore h2{
+    margin-top:1.5em;
+    margin-bottom:0.5em;
+    color:rgb(70,140,36);
+}
+
+.entrerScore table{
+    width:80%;
+}
+
+.entrerScore .rempli{
+    margin-bottom:3em;
+}
+
+.entrerScore td{
+    border-top: 1px solid gray;
+}
+
+.entrerScore .rempli td{
+    padding-top:0.8em;
+    padding-bottom:0.8em;
+}
+
+.entrerScore .score{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.entrerScore .score input{
+    width:2.5em;
+    height: 2em;
+}
+
+.entrerScore button{
+    border:none;
+    background-color:rgb(70,140,36);
+    color:white;
+    border-radius:0.2em;
+    transition:0.2s;
+    padding-top:0.4em;
+    padding-bottom:0.4em;
+}
+
+.entrerScore button:hover{
+    background-color: rgb(12,111,10);
+    transition:0.2s;
+}
+
+/*GESTION DES MEMBRES*/
+
+#gerermembres{
+    display:flex;
+    flex-direction:column;
+}
+
+#gerermembres h2{
+    color:rgb(70,140,36);
+    margin: 1.5em auto 0.7em;
+}
+
+#gerermembres #searchCase{
+    margin-bottom:2em;
+    position: relative;
+}
+
+#gerermembres #searchUser{
+    display:flex;
+    justify-content: center;
+}
+
+#gerermembres #searchUser #attribut{
+    border: 1px solid lightgray;
+    border-right:none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height:20px;
+    width:10%;
+    padding-left:0.9em;
+}
+
+#gerermembres #searchUser #search{
+    border:none;
+    cursor:pointer;
+    background-color:rgb(70,140,36);
+    color:white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition:0.2s;
+    padding-top:0;
+    padding-bottom:0.1em;
+    height:24px;
+    width:6%;
+}
+
+#gerermembres #searchCase #instantSearch{
+    background-color: white;
+    list-style-type:none;
+    margin-top:0;
+    width:16%;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom:1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    padding:0;
+    position:absolute;
+    left: 41.5%;
+    cursor:pointer;
+    border-radius: 10px;
+}
+
+#gerermembres #searchCase #instantSearch .instantSearchLine{
+    font-size: 0.8em;
+    padding: 0.2em 0.2em 0.2em 0.5em;
+}
+
+#gerermembres #searchCase #instantSearch .instantSearchLine:hover{
+    background-color: #F5F5F5;
+}
+
+#gerermembres #legende {
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+#gerermembres #legende .categorie{
+    width:15em;
+}
+
+#cMoi{
+    background-color: lightgreen;
+    width:2em;
+    height:1em;
+    border:1px solid gray;
+    display:inline-block;
+    margin-left:4em;
+
+}
+
+#cJoueur{
+    cursor:pointer;
+    background-color: rgb(231,234,237);
+    width:2em;
+    height:1em;
+    border:1px solid gray;
+    display:inline-block;
+    margin-left:4em;
+}
+
+#cAdmin{
+    cursor:pointer;
+    background-color: lightseagreen;
+    width:2em;
+    height:1em;
+    border:1px solid gray;
+    display:inline-block;
+    margin-left:4em;
+}
+
+#cSuperAdmin{
+    cursor:pointer;
+    background-color: lightcoral;
+    width:2em;
+    height:1em;
+    border:1px solid gray;
+    display:inline-block;
+    margin-left:4em;
+}
+
+
+#membres{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.user, .player,.admin,.superAdmin{
+    display:flex;
+    align-items:center;
+    border: 1px solid gray;
+    border-radius:2px;
+    margin-top:2em;
+    margin-left:2em;
+    margin-right:2em;
+    width:15em;
+    height:5em;
+    transition:0.5s;
+}
+
+.user:hover,.player:hover,.admin:hover,.superAdmin:hover{
+    width:15.5em;
+    transition:0.5s;
+}
+
+.player{
+    background-color:rgb(231,234,237);
+}
+
+.admin{
+    background-color:lightseagreen;
+}
+
+.user{
+    background-color:lightgreen;
+}
+
+.superAdmin{
+    background-color: lightcoral;
+}
+
+#membres figure{
+    margin:0;
+}
+
+#membres img{
+    width:4em;
+    margin-left:0.7em;
+    border: 1px solid gray;
+    border-radius:1em;
+}
+
+ul .nom{
+    font-size: 1.5em;
+}
+
+ul .statu{
+    font-size:0.85em;
+}
+
+#membres button{
+    display:flex;
+    flex-direction: column;
+    border:none;
+    padding: 0;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+#membres button:hover{
+    font-weight: bold;
+    transition:0.2s;
+}
+
+.player button{
+    background-color: rgb(231,234,237);
+}
+
+.admin button{
+    background-color:lightseagreen;
+}
+
+.user button{
+    background-color:lightgreen;
+}
+
+.superAdmin button{
+    background-color:lightcoral;
+}

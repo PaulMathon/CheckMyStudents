@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Historique</title>
+    <link href="/css/styleJoueur.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header th:replace="~{fragments :: header}">
+    </header>
+
+    <nav th:replace="~{fragments :: menu(historiqueParis)}">
+    </nav>
+
+    <h1>Bienvenue sur l'historique de vos paris</h1>
+
+    <section id="sectionhistorique">
+        <main class="mainhistorique">
+            <h2 class="h2section">Tous vos paris</h2>
+            <table id="tableHistorique" >
+                <tbody class="tbodyhist">
+                    <tr class="histtab">
+                        <th>Equipes</th>
+                        <th>Resultat</th>
+                        <th>Date</th>
+                        <th>Gagnant / Perdant</th>
+                    </tr>
+                    <tr class="tbodyhist" th:each="pari : ${listParisPassedMatchs}">
+                        <td class="historique" th:text="${pari.getMatch().getTeamIn().getName()}+' vs '+${pari.getMatch().getTeamOut().getName()}">Ca marche pas</td>
+                        <td class="historique" th:text="${pari.getButIn()} +' / '+${pari.getButOut()}">Ca marche pas</td>
+                        <td class="historique" th:text="${pari.match.getDate()}">Ca marche pas</td>
+                        <td th:class="${pari.getResult()== 0}? 'perdant' : 'gagnant' " th:text="${pari.getResult()== 0}? 'Perdant' : 'Gagnant' " ></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </main>
+
+        <aside class="asidehistorique">
+            <h2 class="h2section">Recherchez un ancien pari en fonction :</h2>
+            <form method="get">
+                <select name="team">
+                    <option value="null"></option>
+                    <option th:each="teamIn : ${teamList}" th:value="${teamIn.name}" th:text="${teamIn.name}">Losc</option>
+                </select>
+                <input type="date" name="date" >
+                <select name="result">
+                    <option value="null"></option>
+                    <option value="victory">Victoire</option>
+                    <option value="defeat">Défaite</option>
+                </select>
+                <input type="submit" name="searchBet" value="Rechercher">
+            </form>
+        </aside>
+    </section>
+
+
+
+
+</body>
+</html>

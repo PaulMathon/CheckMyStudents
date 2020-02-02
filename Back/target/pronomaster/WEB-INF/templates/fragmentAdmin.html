@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+    <title>Title</title>
+</head>
+<body>
+    <header th:fragment="header">
+        <h1>PRONOMASTER</h1>
+        <p><a href="/deconnexion" title="Aller à la page d'accueil">Se d&#233;connecter</a></p>
+    </header>
+
+    <!-- Barre de menu -->
+    <nav th:fragment="menu(currentPage)">
+        <p th:class="${currentPage == 'accueil'} ? 'active':''"><a href="/espace/administrateur/accueiladmin" title="Aller &#224; la page d'accueil administrateur">Accueil</a></p>
+        <p th:class="${currentPage == 'ajoutmatch'} ? 'active':''"><a href="/espace/administrateur/ajoutmatch" title="Aller &#224; la page d'ajout de matchs">Ajouter un match</a></p>
+        <p th:class="${currentPage == 'entrerscore'} ? 'active':''"><a href="/espace/administrateur/entrerscore" title="Aller &#224; la page des r&#233;sultats">Entrer des scores</a></p>
+        <p th:class="${currentPage == 'gerermembres'} ? 'active':''"><a href="/espace/administrateur/gerermembres" title="Aller &#224; la page de gestion des membres" id="members">Membres</a></p>
+        <p th:text="'Utilisateur : '+${userName}" id="userName"></p>
+    </nav>
+
+
+
+
+
+
+</body>
+</html>

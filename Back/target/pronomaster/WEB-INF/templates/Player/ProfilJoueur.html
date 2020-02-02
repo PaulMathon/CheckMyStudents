@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+   <title>Profil</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="/css/styleJoueur.css" type="text/css" rel="stylesheet">
+   <script src="../../js/Player/ProfilPlayer.js" type="application/javascript"></script>
+</head>
+<body>
+
+   <header th:replace="~{fragments :: header}">
+   </header>
+   <nav th:replace="~{fragments :: menu(profil)}">
+   </nav>
+
+   <main id="profilJoueur">
+       <h2 th:text="${player.name}"></h2>
+       <figure >
+           <img th:src="${url}" id="picture">
+       </figure>
+       <form method="post" enctype="multipart/form-data" id="changePicture">
+           <label>Changer ma photo de profil</label>
+           <input type="file" name="photoProfil" id="chooseFile">
+           <input type="submit" name="profilePicture" value="Enregistrer" id="submitPicture">
+       </form>
+
+       <div id="changePasswordCase">
+           <h3>Changer le mot de passe</h3>
+
+           <form method="post" id="changePassword">
+               <label for="name">Nouveau mot de passe</label>
+               <input class="newpassword" type="password" name="password" >
+               <label for="name">Comfirmer le mot de passe</label>
+               <input class="newpassword" type="password">
+               <input id="changepassword" name="changePassword" value="changePassword" type="submit">
+           </form>
+       </div>
+
+   </main>
+
+</body>
+</html>

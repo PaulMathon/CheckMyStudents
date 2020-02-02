@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>PronoMaster</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../css/styleConnexion.css" rel="stylesheet">
+  <script src="../../js/Accueil.js" type="application/javascript"></script>
+</head>
+<body>
+
+<!-- barre de connexion -->
+<header>
+
+  <h1 class="tracking-in-expand">PRONOMASTER</h1>
+  <form method="post" id="connecte">
+    <ul style="list-style-type:none">
+      <li class="champ">
+        <label for="name">Identifiant</label>
+        <input type="text" name="name" id="nameConnexion">
+      </li>
+      <li class="champ">
+        <label for="mdp">Mot de passe</label>
+        <input type="password" name="mdp" id="mdp">
+      </li>
+      <li>
+        <input id="connexion" name="connexion" type="submit" value="connexion">
+      </li>
+    </ul>
+    <p th:text="${erreurConnexion}"></p>
+  </form>
+
+</header>
+
+<!-- Message d'accueil -->
+<section class="main">
+  <article>
+    <h2>Bienvenue !</h2>
+    <figure>
+      <img class="bounce-in-bck" src="images/logofoot.png" alt="logo HTML 5">
+    </figure>
+    <a href="#ancre">&#9660;    Description    	&#9660;</a>
+  </article>
+
+
+  <!-- Formulaire d'inscription -->
+
+
+  <form id="formulaireInscription" method="post">
+
+    <h2>Inscription</h2>
+    <p>
+      <label for="name">Nom d'utilisateur</label>
+      <input class="newchamp" type="text" name="name" id="name">
+    </p>
+    <p>
+
+      <label for="mdp">Mot de passe</label>
+      <input class="newchamp" type="password" name="mdp1" id="mdp1">
+    </p>
+    <p>
+      <label for="mdp">Confirmer le mot de passe</label>
+      <input class="newchamp" type="password" name="mdp2" id="mdp2">
+    </p>
+    <p>
+      <label for="mdp">Adresse e-mail</label>
+      <input class="newchamp" type="email" name="mail1" id="mail1">
+    </p>
+    <p>
+      <label for="mdp">Confirmer l'adresse e-mail</label>
+      <input class="newchamp" type="email" name="mail2" id="mail2">
+    </p>
+      <input id="inscription" name="connexion" type="submit" value="inscription">
+    </p>
+
+  </form>
+
+</section>
+
+<section class="goal" id="ancre">
+ <div>
+     <h2>Rejoins PronoMaster et affronte tes potes</h2>
+    <p class="goal">Inscris-toi, pari, gagne et deviens un <strong> PronoMaster</strong></p>
+    <p>Pour chaque journee de la Ligue 1, nous te proposerons de parier sur le score de chaque équipe. Tu peux voter jusqu'à la veille du match. Attention, si tu ne paries pas tu ne pourrais pas gagner de points.</p>
+
+ </div>
+</section>
+
+<section class="rules">
+  <div>
+    <h2> Les regles</h2>
+
+
+      <p class="rules">Chaque match de Ligue 1 seront affiches dans ton espace personnel au moins <strong>7 jours</strong> avant la date officiel.</p>
+      <p> Rentre les scores et valide ton pari. Le lendemain du match, tu pourras voir si tu avais viser juste.</p>
+      <p> Ton score sera mis a jour automatiquement:</p>
+      <ul >
+        <li>+1 si tu avais vu juste</li>
+        <li>0 si tu t'es trompe</li>
+      </ul>
+   </div>
+</section>
+
+<section class="presentationTeam">
+    <h2>Voici l'équipe de <strong>PronoMaster</strong></h2>
+    <h3>L'équipe est composée de 4 étudiants d'HEI Lille</h3>
+    <section>
+        <figure class="square swing-out-top-bck" >
+          <img class="square swing-out-top-bck" src="../images/Jules.png" >
+          <figcaption>Jules Anthonioz</figcaption>
+        </figure>
+        <figure>
+          <img class="rectangle swing-out-top-bck" src="../images/Paul.jpg">
+          <figcaption>Paul Mathon</figcaption>
+        </figure>
+        <figure>
+          <img class="square swing-out-top-bck" src="../images/Pierre.jpg">
+          <figcaption>Pierre Coué</figcaption>
+        </figure>
+        <figure>
+          <img class="square swing-out-top-bck" src="../images/Kanesha.jpg">
+          <figcaption>Kanesha Obertan</figcaption>
+        </figure>
+    </section>
+</section>
+</body>
+</html>

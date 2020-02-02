@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+    <header th:fragment="header">
+        <h1>PRONOMASTER</h1>
+        <p><a href="/deconnexion" title="Aller à la page d'accueil">Se d&#233;connecter</a></p>
+    </header>
+
+    <!-- Barre de menu -->
+    <nav th:fragment="menu(currentPage)">
+        <p th:class="${currentPage == 'parier'} ? 'active':''"><a href="/espace/joueur/parier" title="Aller &#224; la page pour faire des paris">Parier</a></p>
+        <p th:class="${currentPage == 'mesparis'} ? 'active':''"><a href="/espace/joueur/mesparis" title="Aller &#224; la page des paris disponibles">Mes paris</a></p>
+        <p th:class="${currentPage == 'classement'} ? 'active':''"><a href="/espace/joueur/classement" title="Aller &#224; la page classement">Classement</a></p>
+        <p th:class="${currentPage == 'historiqueParis'} ? 'active' : ''"> <a href="/espace/joueur/historiqueParis" title="Aller &#224; la page historique">Historique des Paris</a></p>
+        <p th:class="${currentPage == 'profil'}? 'active' : ''"><a href="/espace/joueur/profil" title="Visiter mon profil" id="userName" th:text="${userName}"></a></p>
+    </nav>
+
+    <aside th:fragment="colonneClassement">
+
+        <h3 class="nomTableau">Classement</h3>
+        <table class="tableaucolonne">
+            <tr class="hautTableau">
+                <th>Classement</th>
+                <th>Utilisateur</th>
+                <th>Score</th>
+            </tr>
+            <tr th:each="user : ${userListSmaller}" align="center">
+                <td class="classement" th:text="${userStat.count}"></td>
+            	<td class="classement" th:text="${user.name}">1</td>
+                <td th:text="${user.score}"></td>
+            </tr>
+        </table>
+        <h3 class="nomTableau">Matchs r&#233;cemment termin&#233;s</h3>
+        <table class="tableaucolonne">
+            <tr class="hautTableau" >
+                <th >Match</th>
+                <th >Date</th>
+                <th>R&#233;sultat</th>
+            </tr>
+            <tr th:each="match : ${listOfPassedMatches}" align="center">
+                <td th:text="${match.getTeamIn().getName()} + ' vs ' + ${match.getTeamOut().getName()} ">PSG / OM</td>
+                <td th:text="${match.getDate()}">Date</td>
+                <td th:text="${match.getButIn()} + ' / ' + ${match.getButOut()}">Score</td>
+        </table>
+    </aside>
+
+</body>
+</html>

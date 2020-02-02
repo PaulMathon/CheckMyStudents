@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styleAdmin.css">
+    <title>Entrer Score</title>
+    <script src="../../../js/Administrator/PutScoreMatch.js" type="application/javascript"></script>
+</head>
+<body>
+<header th:replace="~{fragmentAdmin::header}"></header>
+<nav th:replace="~{fragmentAdmin::menu(entrerscore)}"></nav>
+<main class="entrerScore">
+    <h2>Entrer le score d'un match</h2>
+    <table class="remplir">
+        <tr>
+            <th>Domicile</th>
+            <th>Score</th>
+            <th>Ext&#233;rieur</th>
+            <th>Date</th>
+            <th>Enregistrer</th>
+        </tr>
+        <tr th:each="match:${listOfPassedMathsWithoutScore}">
+            <form method="post">
+                <td th:text="${match.teamIn.name}" align="center"></td>
+                <td class="score" align="center">
+                    <input type="number" name="butIn" >
+                    <p> - </p>
+                    <input type="number" name="butOut">
+                </td>
+                <td th:text="${match.teamOut.name}" align="center"></td>
+                <td th:text="${match.date}" align="center"></td>
+                <td align="center">
+                    <button type="submit" name="entrerScore" th:value="${match.idMatch}">Enregistrer score</button>
+                </td>
+            </form>
+        </tr>
+        <tr>
+            <p th:text="${errormessage}"></p>
+        </tr>
+    </table>
+
+    <h2>Match ajout&#233;s (pass&#233;s)</h2>
+    <table class="rempli">
+        <tr>
+            <th>Domicile</th>
+            <th>Score</th>
+            <th>Ext&#233;rieur</th>
+            <th>Date</th>
+        </tr>
+        <tr th:each="match:${listOfPassedMatchsWithScore}">
+            <td th:text="${match.teamIn.name}" align="center"></td>
+            <td th:text="${match.butIn+' - '+match.butOut}" align="center"></td>
+            <td th:text="${match.teamOut.name}" align="center"></td>
+            <td th:text="${match.date}" align="center"></td>
+        </tr>
+    </table>
+</main>
+
+
+</body>
+</html>

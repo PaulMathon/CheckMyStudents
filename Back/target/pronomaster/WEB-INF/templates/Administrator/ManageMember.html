@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styleAdmin.css">
+    <script src="../../../js/Administrator/ManageMembers.js" type="application/javascript"></script>
+    <script src="../../../js/utilities.js" type="application/javascript"></script>
+    <title>G&#233;rer Membres</title>
+</head>
+<body>
+
+<header th:replace="~{fragmentAdmin::header}"></header>
+<nav th:replace="~{fragmentAdmin::menu(gerermembres)}"></nav>
+
+<main id="gerermembres">
+
+    <h2>Liste des membres</h2>
+    <div id="searchCase">
+        <div id="searchUser">
+            <input type="text" id="attribut" name="filtre">
+            <input type="submit" id="search" name="searchUser" value="Rechercher">
+        </div>
+        <ul id="instantSearch">
+
+        </ul>
+    </div>
+
+
+    <div id="legende">
+        <div class="categorie">
+            <div id="cJoueur"></div>
+            <span>Joueurs</span>
+        </div>
+        <div class="categorie">
+            <div id="cAdmin"></div>
+            <span>Administrateur</span>
+        </div>
+        <div class="categorie">
+            <div id="cSuperAdmin"></div>
+            <span>Administrateur</span>
+        </div>
+    </div>
+
+    <div id="membres">
+
+    </div>
+
+</main>
+
+</body>
+</html>

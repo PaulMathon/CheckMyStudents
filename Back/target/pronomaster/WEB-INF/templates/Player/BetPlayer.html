@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Parier</title>
+    <link href="/css/styleJoueur.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header th:replace="~{fragments :: header}">
+    </header>
+
+    <nav th:replace="~{fragments :: menu(parier)}">
+    </nav>
+
+    <main>
+        <div id="rentrerPari">
+            <h2>A vous de parier!</h2>
+            <form method="post" id="pariDisponibles">
+            <table class="parisDispos">
+                <tr>
+                    <th  class= "teamColumn">Equipe 1</th >
+                    <th>Resultat</th >
+                    <th class= "teamColumn">Equipe 2</th >
+                    <th>Date</th>
+                    <th>Enregistrer</th>
+                </tr>
+                <tr th:each="match : ${listOfUnbetMatchs}" align="center">
+                    <td th:text="${match.teamIn.name}"></td>
+                    <td class="score">
+                        <input type="number" th:name="'score_equipe_in_'+${match.idMatch}" >
+                        <p> - </p>
+                        <input type="number" th:name="'score_equipe_out_'+${match.idMatch} ">
+                    </td>
+                    <td th:text="${match.teamOut.name}"></td>
+                    <td th:text="${match.date}"></td>
+                    <td align="center">
+                        <button type="submit" name="enregistrer" th:value="${match.idMatch}">Enregistrer le pari</button>
+                    </td>
+                </tr>
+            </table>
+            </form>
+            <p th:text="${errorMessage}"></p>
+        </div>
+
+        <aside class="asideJoueur" th:replace="~{fragments::colonneClassement}">
+        </aside>
+    </main>
+
+
+</body>
+</html>

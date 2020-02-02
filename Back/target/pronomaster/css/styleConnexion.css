@@ -1,0 +1,501 @@
+@font-face {
+    font-family:'PhosphateInline';
+    src:url('/fonts/PhosphateInline.ttf')format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'FuturaMedium';
+    src:url('/fonts/futuramedium.ttf')format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+/* Animation Accueil*/
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes bounce-in-bck {
+    0% {
+        transform: scale(7);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        transform: scale(1.5);
+        animation-timing-function: ease-in;
+    }
+    72% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+    81% {
+        transform: scale(1.24);
+        animation-timing-function: ease-in;
+    }
+    89% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+    95% {
+        transform: scale(1.04);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes swing-out-top-bck {
+    0% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: rotateX(-100deg);
+        transform: rotateX(-100deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 0;
+    }
+}
+body{
+    font-family:'FuturaMedium','Arial','Helvetica',sans-serif;
+    padding:0;
+    margin:0;
+}
+
+/*barre de titre et connexion*/
+
+header{
+
+    background-color:rgb(70,120,36);
+    font-size:2em;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+h1 {
+    font-family:'PhosphateInline','Arial';
+    color:white;
+    margin-left:0.7em;
+    padding-top:0.4em;
+    padding-bottom:0.4em;
+    margin-bottom: 0;
+    text-align: center;
+}
+h1.tracking-in-expand{
+    animation: tracking-in-expand 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s backwards;
+}
+article h2,form h2{
+    text-align:center;
+
+}
+
+ul{
+    display:flex;
+    margin:0;
+}
+
+li{
+    margin: 0.1em;
+}
+
+li label{
+    font-size:0.4em;
+    font-weight:bold;
+    color:white;
+    padding-left:0.2em;
+}
+
+.champ{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.champ input{
+    height:2em;
+    border:none;
+    border-radius: 0.2em;
+}
+
+.champ input:hover{
+    cursor:text;
+}
+
+#connexion{
+    color:white;
+    background-color: black;
+    border:none;
+    border-radius: 0.2em;
+    margin-right:2em;
+    height:2.6em;
+    padding-left:1em;
+    padding-right:1em;
+    transition:0.5s;
+}
+
+#connexion:hover{
+    background-color: rgb(70,120,36);
+    border:1px solid black;
+    transition:0.5s;
+    cursor:pointer;
+}
+
+#connecte p{
+    font-size:0.4em;
+    color:white;
+    padding-top:0;
+    padding-bottom:0;
+    padding-left:11%;
+    margin:0;
+
+
+}
+
+/*Partie principale*/
+
+section.main{
+    display:flex;
+    background-color: #F5F5F5;
+    background-image: url("../images/foot.jpg");
+    background-position: center;
+    background-size:cover;
+
+
+}
+
+/*Message de bienvenue*/
+
+article{
+    display:flex;
+    flex-direction: column;
+    padding-top:4em;
+    padding-bottom: 3em;
+    padding-right:1.7em;
+    margin-top:2em;
+    margin-bottom: 2em;
+    margin-left: 5%;
+    width:45%;
+    border-right: 1.5px solid black;
+    background:rgba(240,240,240,0.8);
+}
+
+img.bounce-in-bck {
+    animation: bounce-in-bck 1.1s linear 1s ;
+    width:33%;
+    margin-left:33%;
+}
+
+article a{
+    margin-left:auto;
+    margin-right:auto;
+    text-decoration: none;
+    color:black;
+    transition:0.5s;
+}
+
+article a:hover{
+    font-weight:bold;
+    transition:0.5s;
+}
+
+/* Formulaire d'inscription*/
+
+section.main form{
+    display:flex;
+    flex-direction: column;
+    padding:2em;
+    padding-top: 3em;
+    margin-top:2em;
+    margin-bottom: 2em;
+    margin-right: 5%;
+    width:45%;
+    background:rgba(240,240,240,0.8);
+
+}
+
+form p{
+    padding-right:0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newchamp{
+    width:50%;
+    border-color: black;
+    border-width:0.5px;
+    border-radius: 0.2em;
+    height: 1.2em;
+}
+
+.newchamp:hover{
+    cursor:text;
+}
+
+.erreurInscription {
+    color:red;
+    font-size:0.75em;
+    margin-top:0;
+
+}
+
+#inscription{
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 0.2em;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    transition:0.4s;
+}
+
+#inscription:hover{
+    font-weight: bold;
+    background-color: rgb(70,140,36);
+    cursor:pointer;
+    transition: 0.4s;
+}
+
+/*Section goal*/
+
+ section.presentationTeam{
+    background-color:rgb(70,140,36);
+    height: 400px;
+    text-align: center;
+    color:#F5F5F5;
+}
+
+section.goal{
+    background-image: url("../images/foot-1.jpg");
+    background-position: center;
+    background-size:cover;    
+    height: 400px;
+    text-align: center;
+    color:#F5F5F5;
+    display: grid;
+}
+
+section.goal div{
+    background-color:rgba(54,113,24,0.7);
+    margin: 5% 5% 5% 5%;
+    padding-bottom:5px;
+
+}
+section.goal h2{
+    padding-top: 3%;
+    font-size: 3em;
+
+}
+p.goal{
+    font-size: 1.3em;
+}
+
+strong{
+    font-weight: bolder;
+    font-size: 2em;
+    color: #D2691E;
+}
+
+/*Section regles*/
+
+section.rules{
+    color:rgb(70,140,36);
+    background-color: #F5F5F5;
+    height: 500px;
+    text-align: center;
+    display: inline-block;
+    width:100%;
+}
+
+section.rules h2{
+    padding-top: 2em;
+    font-size: 3em;
+}
+
+section.rules ul{
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+
+}
+section.rules li::before {
+    content:"\0026BD";
+}
+
+
+/* Section presentationTeam*/
+section.presentationTeam{
+    text-align: center;
+    display: grid;
+}
+
+
+
+section.presentationTeam section{
+    display:flex;
+    justify-content: space-evenly;
+}
+section.presentationTeam img{
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    position: inherit;
+    border-radius: 30px;
+    z-index:1;
+
+}
+section.presentationTeam figcaption{
+    position: relative;
+    top: -44%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    opacity:1;
+    z-index:-1;
+    color:#F5F5F5;
+    font-weight: bolder;
+
+
+}
+section.presentationTeam figure{
+    z-index:0;
+}
+
+
+section.presentationTeam img.swing-out-top-bck:hover{
+    animation: swing-out-top-bck 1s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+
+
+}
+
+section.presentationTeam img.square{
+    max-width: 180px;
+    max-height: 180px;
+}
+
+section.presentationTeam img.rectangle{
+    max-height: 180px;
+    max-width: 160px;
+}
+
+
+/*Sur petit écran*/
+@media only screen and (max-width: 750px) {
+
+    /*barre de titre et connexion*/
+
+    header{
+        font-size:1em;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h1{
+        margin-top:1.5em;
+        margin-left:0;
+    }
+
+    header form{
+        margin:0;
+    }
+
+    ul{
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom:0.3em;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    li{
+        display: flex;
+        flex-direction: column;
+        margin: 0.2em;
+
+    }
+
+    li label{
+        font-size:0.5em;
+    }
+
+    .champ input{
+        height:1em;
+        border:none;
+        border-radius: 0.2em;
+    }
+
+    #connexion{
+        color:white;
+        background-color: black;
+        border:none;
+        margin:0;
+        height:1.5em;
+    }
+
+    /*Message de bienvenue*/
+
+    article{
+        padding-left:0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right:0em;
+        margin-top:2em;
+        margin-bottom: 2em;
+        margin-left: 5%;
+        width:90%;
+        border:none;
+        padding-bottom: 3em;
+        border-bottom-color: black;
+        border-bottom-style: solid;
+        border-bottom-width: 1.5px;
+    }
+
+
+
+    /* Formulaire d'inscription*/
+
+    section.main form{
+        padding:0;
+        padding-top: 0;
+        margin-top:2em;
+        margin-bottom: 2em;
+        margin-left: 5%;
+        width:90%;
+    }
+
+
+    #inscription{
+        width: 100%;
+
+    }
+
+    /*Section goal*/
+
+    section.goal, section.presentationTeam, section.rules{
+        height:500px;
+    }
+}

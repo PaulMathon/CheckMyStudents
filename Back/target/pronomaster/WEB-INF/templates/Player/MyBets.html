@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <title>Mes paris</title>
+    <link href="/css/styleJoueur.css" type="text/css" rel="stylesheet">
+    <script src="../../../js/Player/Mybets.js" type="application/javascript"></script>
+</head>
+    <body>
+    <header th:replace="~{fragments :: header}">
+    </header>
+
+    <nav th:replace="~{fragments :: menu(mesparis)}">
+    </nav>
+    <main id="myBets">
+        <div id="mesParis">
+            <h2>Paris d&#233;j&#224; effectu&#233;s</h2>
+            <p id="noBetMessage">Vous n'avez pas de paris en cours! Rendez-vous sur l'onglet <a href="/espace/joueur/parier" title="Aller &#224; la page pour faire des paris">parier</a> pour remédier à cela.</p>
+            <table id="tableauParis">
+                <thead>
+                    <tr>
+                        <th class= "teamColumn">Equipe 1</th >
+                        <th colspan ="2">Resultat</th >
+                        <th class= "teamColumn">Equipe 2</th >
+                        <th>Date</th>
+                        <th>Annulation</th>
+                    </tr>
+                </thead>
+                <tbody id="betsContents" align="center">
+
+                </tbody>
+
+
+            </table>
+        </div>
+
+        <aside th:replace="~{fragments::colonneClassement}" class="asideJoueur">
+        </aside>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,451 @@
+@font-face {
+    font-family:'PhosphateInline';
+    src:url('/fonts/PhosphateInline.ttf')format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:"TimeBurner";
+    src:url('/fonts/timeburnernormal.ttf')format('truetype');
+    font-weight:normal;
+    font-style:normal;
+}
+
+body{
+    font-family:"TimeBurner",'Arial',sans-serif;
+    background-color: #F5F5F5;
+    padding:0;
+    margin:0;
+}
+
+/*image avec titre + déconnection*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image:url("/images/backgroundHeader.png");
+    position: -webkit-sticky; /* Safari*/
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+header h1{
+    font-family:'PhosphateInline','Arial',sans-serif;
+    font-size: 2em;
+    color:white;
+    margin-left: 1em;
+    margin-top:1.3em;
+}
+
+header a{
+    background-color: rgb(70,140,36);
+    color:white;
+    font-size: 0.7em;
+    padding:0.5em;
+    padding-left:1em;
+    padding-right:1em;
+    text-decoration:none;
+    margin-right: 2em;
+    border-radius:2px;
+    transition:0.5s;
+    border: 1px solid rgb(12, 111, 10);
+}
+
+header a:hover{
+    background-color: rgb(12,111,10);
+    transition:0.5s;
+}
+
+/*Menu de navigation*/
+
+nav{
+    display:flex;
+    background-color: rgb(70,140,36);
+    padding-left:1em;
+    position: -webkit-sticky; /* Safari*/
+    position:sticky;
+    top:3.9em;
+    width: inherit;
+}
+
+nav p{
+    margin-top:0;
+    margin-bottom: 0;
+    padding-top:0.5em;
+    padding-bottom: 0.5em;
+}
+
+nav p a{
+    color:white;
+    text-decoration: none;
+    padding-left:1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom:0.5em;
+    margin-top:0;
+    transition:0.5s;
+}
+
+.active{
+    background-color:rgb(12,111,10);
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px;
+}
+
+nav p a:hover{
+    background-color:rgb(12,111,10);
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px;
+    transition: 1s;
+}
+
+
+
+/*ONGLET PARIER*/
+
+
+main{
+    display:flex;
+    justify-content:space-around;
+}
+
+#rentrerPari, #mesParis{
+    width:65%;
+}
+
+#rentrerPari h2,#mesParis h2{
+    margin-top:1.5em;
+    margin-bottom:1em;
+    color:rgb(70,140,36);
+    margin-left:8%;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#rentrerPari form{
+    width:90%;
+    margin-left:5%;
+}
+
+#rentrerPari table, #mesParis table{
+    width:100%;
+    margin-bottom:3em;
+}
+
+/*A VERIFIER SI UTILE*/
+#rentrerPari th{
+    background-color:#F5F5F5;
+}
+
+#rentrerPari td, #mesParis td{
+    border-top: 1px solid gray;
+    padding-top:0.8em;
+    padding-bottom:0.8em;
+}
+
+#rentrerPari .score{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#rentrerPari .score input{
+    width:2.5em;
+    height: 2em;
+}
+
+#rentrerPari button{
+    border:none;
+    background-color:rgb(70,140,36);
+    color:white;
+    border-radius:0.2em;
+    transition:0.2s;
+    padding-top:0.4em;
+    padding-bottom:0.4em;
+}
+
+#rentrerPari button:hover{
+    background-color: rgb(12,111,10);
+    transition:0.2s;
+}
+
+#sectionhistorique {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+/*Main HISTORIQUE*/
+.mainhistorique {
+    width: 65%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Aside historique*/
+.asidehistorique {
+    justify-content: center;
+    width: 40%;
+}
+
+#sectionhistorique {
+    text-align: center;
+}
+
+#tableHistorique {
+    display: table;
+}
+
+.tbodyhist {
+    text-align: -webkit-center;
+
+}
+
+.histtab {
+    display: table-row;
+    vertical-align: inherit;
+}
+.gagnant{
+    background-color: green;
+    color: white;
+    font-size: larger;
+}
+.perdant{
+    background-color: red;
+    color: white;
+    font-size: larger;
+}
+
+.h2section {
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+/*ASIDE JOUEUR*/
+.asideJoueur {
+    width: 35%;
+    text-align: center;
+}
+
+.asideJoueur{
+    display: flex;
+    width: 35%;
+    border:2px solid gray;
+    border-radius:1em;
+}
+
+.asideJoueur table{
+    width:90%;
+    margin-right:10%;
+}
+
+/*MES PARIS*/
+/*La plupart des éléments CSS dans la partie PARIER*/
+
+#mesParis h2{
+    margin-left: 0;
+    color:black;
+}
+
+#mesParis p{
+    width:86%;
+    margin-left:6%;
+}
+
+#mesParis #tableauParis{
+    width:90%;
+    margin-left:5%;
+}
+
+/*CLASSEMENT DES JOUEURS*/
+
+#articleClassement article{
+    margin: 2em;
+    width: 70%;
+}
+#articleClassement h1{
+    font-size: 2em;
+}
+#articleClassement h1, #articleClassement p{
+    text-align: center;
+}
+#articleClassement article h1{
+    width: inherit;
+}
+#articleClassement table.tableaucolonne {
+    width: 100%;
+}
+
+#articleClassement h3.nomTableau {
+    text-align: center;
+    font-size: xx-large;
+}
+
+#articleClassement tr.classement{
+    border: 1px solid;
+}
+
+
+#articleClassement td.classement{
+
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+#articleClassement table th{
+    font-weight: bold;
+    font-size: x-large;
+    border-collapse: collapse;
+
+}
+#articleClassement table tr.hautTableau{
+    border:none;
+    font-size: small;
+}
+
+#articleClassement table#classement {
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+#articleClassement article#articleClassement {
+    width: 100%;
+}
+
+#classement .currentUser{
+    background-color:rgb(70,140,36);
+    color:white;
+}
+
+/*Style pour petit ecran*/
+
+@media only screen and (max-width: 750px) {
+    /*image avec titre + déconnection*/
+    header {
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(70, 140, 36) none;
+    }
+
+    header h1 {
+        font-size: 2em;
+        margin-left: 0;
+        margin-top: 1.3em;
+    }
+
+    header a {
+        background-color: rgb(70, 140, 36);
+        color: white;
+        font-weight: bold;
+        margin-right: 0;
+        border-color: rgb(12, 111, 10);
+    }
+
+    /*Menu de navigation*/
+    nav {
+        display: flex;
+        background-color: rgb(70, 140, 36);
+        padding-left: 1em;
+        justify-content: center;
+    }
+
+}/*fermeture petit ecran
+
+/*PROFIL JOUEUR*/
+
+#profilJoueur{
+    display:block;
+}
+
+#profilJoueur h2{
+    margin-top:1em;
+    margin-left:3.5em;
+    font-size:1.8em;
+    font-weight: bold;
+}
+
+#profilJoueur img{
+    width:14em;
+    height:16em;
+    margin-left:3.5em;
+    border:2px solid rgb(70, 140, 36);
+    border-radius : 0.5em;
+}
+
+#profilJoueur{
+    display: flex;
+    flex-direction: column;
+}
+
+#profilJoueur #changePicture{
+    border:2px solid darkred;
+    border-radius:0.5em;
+    width:14em;
+    height:16em;
+    background-color: rgba(255,255,255,0);
+    margin: -1em 5.8em 1.4em;
+}
+
+#profilJoueur #changePicture label{
+    width:86%;
+    margin-left: 7%;
+    margin-top:80em;
+}
+
+#profilJoueur #changePicture #submitPicture{
+    width:50%;
+    margin-left: 25%;
+    cursor:pointer;
+    background-color: rgb(70, 140, 36);
+    color:white;
+    border-radius:0.7em;
+}
+
+#profilJoueur #changePicture input{
+    margin-top:2em;
+}
+
+#profilJoueur #changePasswordCase{
+    margin-left: 5.8em;
+    margin-right: 5.8em;
+    padding:1em;
+    border:2px solid darkcyan;
+    border-radius:0.5em;
+    width:30%;
+    background-color: white;
+}
+
+#profilJoueur #changePasswordCase h3{
+    margin-left: 10%;
+    margin-top:0;
+    margin-bottom:0;
+}
+
+#profilJoueur #changePassword{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+}
+
+#profilJoueur #changePassword .newpassword{
+    background-color: #F5F5F5;
+    border:1px solid darkgray;
+}
+
+#profilJoueur #changePassword input{
+    margin-top:0.5em;
+}
+
+
+
+
+
+

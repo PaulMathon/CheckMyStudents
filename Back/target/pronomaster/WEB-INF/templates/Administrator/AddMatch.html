@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <link rel="stylesheet" type="text/css" href="/css/styleAdmin.css">
+    <title>Ajout Match</title>
+    <script src="../../../js/Administrator/AddMatch.js" type="application/javascript"></script>
+</head>
+<body>
+<header th:replace="~{fragmentAdmin::header}"></header>
+<nav th:replace="~{fragmentAdmin::menu(ajoutmatch)}"></nav>
+<main class="ajoutMatch">
+    <h2>Ajouter un match</h2>
+    <form method="post">
+        <table class="remplir">
+            <tr>
+                <th>Domicile</th>
+                <th>Ext&#233;rieur</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td align="center">
+                    <select name="teamIn">
+                        <option th:each="teamIn : ${teamList}" th:value="${teamIn.idEquipe}" th:text="${teamIn.name}">Losc</option>
+                    </select>
+                </td>
+                <td align="center">
+                    <select name="teamOut">
+                        <option th:each="teamOut : ${teamList}" th:value="${teamOut.idEquipe}" th:text="${teamOut.name}">Lens</option>
+                    </select>
+                </td>
+                <td align="center">
+                    <div>
+                        <input type="date" name="date" >
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <p th:text="${errorMessage}"></p>
+        <button type="submit" name="ajouterMatch" value="ajouterMatch">Enregistrer match</button>
+    </form>
+
+    <h2>Match ajout&#233;s (&#224; venir)</h2>
+    <table class="rempli">
+        <tr>
+            <th>Domicile</th>
+            <th>Ext&#233;rieur</th>
+            <th>Date</th>
+        </tr>
+        <tr th:each="match:${UnpassedMatchsList}">
+            <td th:text="${match.teamIn.name}" align="center"></td>
+            <td th:text="${match.teamOut.name}" align="center"></td>
+            <td th:text="${match.date}" align="center"></td>
+        </tr>
+    </table>
+</main>
+
+</body>
+</html>
